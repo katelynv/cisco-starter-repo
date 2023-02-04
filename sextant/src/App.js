@@ -1,11 +1,29 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Banner from "./Banner";
+import ExhibitComponent from "./ExhibitComponent";
 
 function App() {
-  return (
+  return ( 
+    <div className="app">
+      <Banner/>
+      <br></br>
+      <div className="wrapper">
+        <ExhibitComponent
+          title="IP Address"
+          description="The IP address of your computer is ________."
+        />
+        <ExhibitComponent 
+          title="Latency Information"
+          description="This is where the latency information for pylon will go."
+        />
+      </div>
+      
+    </div>
+
+    /*
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,7 +37,9 @@ function App() {
         </a>
       </header>
     </div>
+  */
   );
+  
 }
 
 export default App;
